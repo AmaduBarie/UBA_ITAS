@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31912.275
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NRA_ITAS", "NRA_ITAS.csproj", "{E1D78CDA-4514-4DCB-B729-B1A91F550FC6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceAPI", "..\ServiceAPI\ServiceAPI.csproj", "{999FE569-17E0-4098-9C03-F0340E1886AF}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ab_nraitas", "http://localhost/ab_nraitas", "{089D661F-CCBF-4B1C-93D4-F425605DDD05}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "false"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
+		Debug.AspNetCompiler.VirtualPath = "/ab_nraitas"
+		Debug.AspNetCompiler.PhysicalPath = "..\NRAITAS.WEB\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\ab_nraitas\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/ab_nraitas"
+		Release.AspNetCompiler.PhysicalPath = "..\NRAITAS.WEB\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\ab_nraitas\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "..\NRAITAS.WEB\"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E1D78CDA-4514-4DCB-B729-B1A91F550FC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1D78CDA-4514-4DCB-B729-B1A91F550FC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1D78CDA-4514-4DCB-B729-B1A91F550FC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1D78CDA-4514-4DCB-B729-B1A91F550FC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{999FE569-17E0-4098-9C03-F0340E1886AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{999FE569-17E0-4098-9C03-F0340E1886AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{999FE569-17E0-4098-9C03-F0340E1886AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{999FE569-17E0-4098-9C03-F0340E1886AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{089D661F-CCBF-4B1C-93D4-F425605DDD05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{089D661F-CCBF-4B1C-93D4-F425605DDD05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{089D661F-CCBF-4B1C-93D4-F425605DDD05}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{089D661F-CCBF-4B1C-93D4-F425605DDD05}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {99518BD4-18E0-478A-BF56-13E3F904A722}
+	EndGlobalSection
+EndGlobal

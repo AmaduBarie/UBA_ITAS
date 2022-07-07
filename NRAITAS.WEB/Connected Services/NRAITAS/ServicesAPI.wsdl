@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="GetPRNDetails">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prn" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetPRNDetailsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetPRNDetailsResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostPaymentToCBA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pi_cod_acct_dr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_cod_acct_cr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="brn1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="brn2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_txn_amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="drcr" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_ref_chq_no" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pi_dat_value" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pi_narrative" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="eod" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="p_err_msg" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PostPaymentToCBAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PostPaymentToCBAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePayment_NRA">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="tin" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="prn" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="amount" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="receipt" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="createdby" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc_ref" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_period" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="t_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="doc_type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="payerName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MakePayment_NRAResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MakePayment_NRAResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetPRNDetailsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPRNDetails" />
+  </wsdl:message>
+  <wsdl:message name="GetPRNDetailsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetPRNDetailsResponse" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentToCBASoapIn">
+    <wsdl:part name="parameters" element="tns:PostPaymentToCBA" />
+  </wsdl:message>
+  <wsdl:message name="PostPaymentToCBASoapOut">
+    <wsdl:part name="parameters" element="tns:PostPaymentToCBAResponse" />
+  </wsdl:message>
+  <wsdl:message name="MakePayment_NRASoapIn">
+    <wsdl:part name="parameters" element="tns:MakePayment_NRA" />
+  </wsdl:message>
+  <wsdl:message name="MakePayment_NRASoapOut">
+    <wsdl:part name="parameters" element="tns:MakePayment_NRAResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ServicesAPISoap">
+    <wsdl:operation name="GetPRNDetails">
+      <wsdl:input message="tns:GetPRNDetailsSoapIn" />
+      <wsdl:output message="tns:GetPRNDetailsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentToCBA">
+      <wsdl:input message="tns:PostPaymentToCBASoapIn" />
+      <wsdl:output message="tns:PostPaymentToCBASoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment_NRA">
+      <wsdl:input message="tns:MakePayment_NRASoapIn" />
+      <wsdl:output message="tns:MakePayment_NRASoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="ServicesAPISoap" type="tns:ServicesAPISoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPRNDetails">
+      <soap:operation soapAction="http://tempuri.org/GetPRNDetails" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentToCBA">
+      <soap:operation soapAction="http://tempuri.org/PostPaymentToCBA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment_NRA">
+      <soap:operation soapAction="http://tempuri.org/MakePayment_NRA" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="ServicesAPISoap12" type="tns:ServicesAPISoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetPRNDetails">
+      <soap12:operation soapAction="http://tempuri.org/GetPRNDetails" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PostPaymentToCBA">
+      <soap12:operation soapAction="http://tempuri.org/PostPaymentToCBA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MakePayment_NRA">
+      <soap12:operation soapAction="http://tempuri.org/MakePayment_NRA" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="ServicesAPI">
+    <wsdl:port name="ServicesAPISoap" binding="tns:ServicesAPISoap">
+      <soap:address location="http://10.240.13.15/ServiceAPI/ServicesAPI.asmx" />
+    </wsdl:port>
+    <wsdl:port name="ServicesAPISoap12" binding="tns:ServicesAPISoap12">
+      <soap12:address location="http://10.240.13.15/ServiceAPI/ServicesAPI.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
